@@ -1,13 +1,16 @@
 /*
  * Author: Abdallah Abdallah
- * Date: 02/20/2025
- * Name: letterGrade.c
+ * Date: 02/24/2025
+ * Name: ch3_playingRandomGame.c
  *
 
  Description:
-    This program takes a student's grade as a float input (0-100) and
-    displays the corresponding letter grade. It validates the input
-    and ensures it falls within the correct range.
+			This program generates a random number between 0 and 100 and compares it
+	to the user’s input. The user must enter a value within the range (0-100).
+	If the absolute difference between the user's input and the generated value
+	is 20 or more, the user wins; otherwise, they lose.
+	The program includes input validation, ensuring the user enters a valid number,
+	and continues running until the user enters 999 to exit.
 
  * Return Value:
  * - 0: Indicates successful execution.
@@ -34,8 +37,8 @@
      while (1){
 
 
-
-                 userInputPoint:
+// create a goto label to repeat if the user input is invalid
+userInputPoint:
 
 
                  printf("Enter a value between 0 and 100  (Enter 999 to EXIT) \n");
@@ -71,12 +74,6 @@
 
                  }
 
-
-
-
-
-
-
                  generatedValue = (rand() % 101); // a random value between 0 and 100
 
                  // only for debugging
@@ -96,19 +93,10 @@
                  }
 
 
-
-
-
-
      } // end of while loop
 
 
-
-
      return(0);
-
-
-
 
 
  }  // end of the main function
